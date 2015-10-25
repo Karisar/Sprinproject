@@ -9,9 +9,9 @@
 </head>
 <body>
 	<h1>Result</h1>
-    id ${greeting.id}
-    content ${greeting.content}
-    lista ${greeting.lista}
+    id ${greeting.id}<br>
+    content ${greeting.content}<br>
+    lista ${greeting.lista}<br>
 		
 	<c:forEach items="${greeting.lista}" var="listItem">
       aas  ${listItem} <br/>

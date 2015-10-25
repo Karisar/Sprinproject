@@ -26,6 +26,8 @@ public class FormController {
 
     @RequestMapping(value="/greeting", method=RequestMethod.POST)
     public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
+    	greeting.SaveNew();
+    	greeting.getAll();
         model.addAttribute("greeting", greeting);
         return "result";
     }
