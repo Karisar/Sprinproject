@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import="java.util.List"%>
+<%@ page import="java.util.ArrayList"%>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Getting Started: Handling Form Submission</title>
@@ -6,10 +9,13 @@
 </head>
 <body>
 	<h1>Result</h1>
-    <p th:text="'id: ' + ${greeting.id}" />
-    <p th:text="'content: ' + ${greeting.content}" />
-    <p th:text="test" />
-    koe ${greeting.id}
+    id ${greeting.id}
+    content ${greeting.content}
+    lista ${greeting.lista}
+		
+	<c:forEach items="${greeting.lista}" var="listItem">
+      aas  ${listItem} <br/>
+    </c:forEach>	
     <a href="/greeting">Submit another message</a>
 </body>
 </html>
