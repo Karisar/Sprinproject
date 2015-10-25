@@ -6,8 +6,10 @@
 </head>
 <body>
 	<h1>Result</h1>
-    <p th:text="'id: ' + ${olio.ID}" />
-    <p th:text="'content: ' + ${olio.nimi}" />
+    <p th:text="'id: ' + ${greeting.id}" />
+    <p th:text="'content: ' + ${greeting.content}" />
+    <p th:text="test" />
+    koe ${greeting.id}
     <a href="/greeting">Submit another message</a>
 </body>
 </html>
