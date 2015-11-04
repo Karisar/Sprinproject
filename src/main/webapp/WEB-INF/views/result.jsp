@@ -11,10 +11,11 @@
 	<h1>Result</h1>
     id ${greeting.id}<br>
     content ${greeting.content}<br>
-    lista ${greeting.lista}<br>
+    lista ${lista}<br>
 		
-	<c:forEach items="${greeting.lista}" var="listItem">
+	<c:forEach items="${lista}" var="listItem">
       aas  ${listItem} <br/>
+     
     </c:forEach>	
     <a href="/greeting">Submit another message</a>
 </body>

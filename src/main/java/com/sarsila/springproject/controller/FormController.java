@@ -3,6 +3,7 @@ package com.sarsila.springproject.controller;
 import com.sarsila.springproject.model.*;
 
 import java.io.BufferedReader;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -26,9 +27,12 @@ public class FormController {
 
     @RequestMapping(value="/greeting", method=RequestMethod.POST)
     public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-    	greeting.SaveNew();
-    	greeting.getAll();
+    	
+    	GreetingDAO dao = new GreetingMongoDaoImpl();
+    	dao.save(greeting);
+    	List list = dao.fetchAll();
         model.addAttribute("greeting", greeting);
+        model.addAttribute("lista", list);
         return "result";
     }
 }
